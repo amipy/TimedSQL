@@ -1,6 +1,7 @@
 import psycopg2
 import json
 import time
+import math
 
 from Command import Command
 
@@ -13,12 +14,18 @@ cursor=dbase.cursor()
 #cursor.execute("SELECT * FROM timexe.testington;")
 #print(cursor.fetchall())
 
+
 commands = []
 for cmnd in config['commands']:
     commands.append(Command(dbase, cmnd['query'], cmnd['time'], cmnd['amount'], cmnd['pause']))
 
+intervals=[]
+for i in commands:
+    intervals.append(i._pause)
 
+min_interval=math.gcd(*intervals)
 
+print(min_interval)
 running = True
 print("The program is running...")
 while running:
@@ -30,7 +37,7 @@ while running:
     if finish:
         running = False
 
-    time.sleep(0.01)
+    time.sleep(min_interval/1000)
 
 print("Finished")
 
