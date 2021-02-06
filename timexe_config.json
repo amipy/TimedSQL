@@ -1,0 +1,11 @@
+{
+  "db": "Testingbase",
+  "pass": "SkylifeEngine",
+  "user": "postgres",
+  "host": "localhost",
+  "commands" : [{
+    "time": "22:59", "query": "INSERT INTO timexe.testington(name, cost) VALUES ('text2', 34);", "amount": 100, "pause": 1000
+  },{
+    "time": "22:59", "query": "SELECT * FROM timexe.testington;", "amount": 10, "pause": 10000
+  }]
+}
