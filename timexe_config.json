@@ -2,7 +2,7 @@
   "db": "DATABASE NAME",
   "pass": "DATABASE PASSWORD",
   "user": "DATABASE USER",
-  "host": "DAYABASE HOST",
+  "host": "DATABASE HOST",
   "commands" : [{
     "time": "QUERY EXECUTION TIME", "query": "QUERY", "amount": QUERY EXECUTION AMOUNT, "pause": QUERY EXECUTION INTERVAL
   }]
