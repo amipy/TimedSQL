@@ -23,7 +23,9 @@ intervals=[]
 for i in commands:
     intervals.append(i._pause)
 
-min_interval=math.gcd(*intervals)
+min_interval=intervals[0]
+if len(intervals)>1:
+    min_interval=math.gcd(*intervals)
 
 print(min_interval)
 running = True
